@@ -1,0 +1,513 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>¿En qué te ayudamos? — La Tía Amparo | CAFIS A.C.</title>
+<meta name="description" content="Responde unas preguntas y te orientamos al momento — o te ponemos en contacto con el equipo si lo necesitas.">
+<link rel="stylesheet" href="assets/css/style.css">
+<link rel="stylesheet" href="assets/css/wizard-b.css">
+</head>
+<body>
+<a class="skip-link" href="#main">Saltar al contenido</a>
+
+<header class="site-header">
+  <div class="container">
+    <div class="brand">
+      <div class="brand-wordmark">LA TÍA<br>AMPARO</div>
+      <div class="brand-divider"></div>
+      <img class="cafis-mark" src="assets/img/cafis-logo-h-blanco.png" alt="CAFIS A.C.">
+    </div>
+    <button class="nav-toggle" aria-label="Abrir menú" aria-expanded="false">☰</button>
+    <nav class="main-nav">
+      <a href="te-ayudamos-b.html" class="active">Inicio</a>
+      <a href="aborto-legal.html">Aborto Legal</a>
+      <a href="datos-aborteros.html">Datos Aborteros</a>
+      <a href="testimonios.html">Testimonios</a>
+      <a href="https://wa.link/bzdji9" class="nav-cta">WhatsApp</a>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+
+  <section class="wizard-hero grain edge-cut edge-to-crema">
+    <span class="blob blob-fill" style="width:260px;height:260px;border:2px solid rgba(255,255,255,.5);top:-100px;left:-60px;"></span>
+    <span class="blob blob-fill" style="width:160px;height:160px;border:2px solid rgba(255,255,255,.4);bottom:-40px;right:4%;"></span>
+    <div class="container reveal">
+      <p class="eyebrow">Amparo te ampara — de verdad</p>
+      <h1>Cuéntanos un poco y te orientamos</h1>
+      <p>Responde unas preguntas cortas — la mayoría de dudas se resuelven aquí mismo, sin dar ningún paso más. Si prefieres o necesitas hablar con alguien, esa opción siempre está disponible.</p>
+      <span class="warm-note">Aquí no hay preguntas complicadas — vamos paso a paso, a tu ritmo. 🧡</span>
+    </div>
+  </section>
+
+  <div class="wizard-wrap">
+    <div class="wizard-card">
+
+      <div class="wizard-progress" id="w-progress">
+        <span class="current"><i></i></span>
+        <span><i></i></span>
+        <span><i></i></span>
+      </div>
+
+      <!-- PASO 1: elección inicial -->
+      <div class="wizard-step active" data-step="1">
+        <div class="kicker">Empecemos</div>
+        <h2>¿Qué necesitas hoy?</h2>
+        <p class="lead">Elige la opción que más se acerque a lo que buscas.</p>
+        <div class="choice-list">
+          <button type="button" class="choice-card" data-goto="elegibilidad">
+            <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 21s-7-4.5-9.5-9A5.5 5.5 0 0 1 12 6a5.5 5.5 0 0 1 9.5 6c-2.5 4.5-9.5 9-9.5 9z"/></svg></span>
+            <span><span class="t">Saber si califico y a qué hospital ir</span><span class="d">Según tus semanas de embarazo, te decimos justo dónde acudir.</span></span>
+          </button>
+          <button type="button" class="choice-card" data-goto="buscar">
+            <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/></svg></span>
+            <span><span class="t">Buscar una duda específica</span><span class="d">Escribe tu pregunta y busca entre todas las respuestas.</span></span>
+          </button>
+          <button type="button" class="choice-card" data-goto="datos">
+            <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 11.5a8.4 8.4 0 0 1-8.6 8.5 8.5 8.5 0 0 1-4-1L3 20l1-5.4a8.4 8.4 0 0 1-1-4A8.4 8.4 0 0 1 11.6 2a8.5 8.5 0 0 1 8.5 8.6z"/></svg></span>
+            <span><span class="t">Ya sé que quiero hablar con alguien</span><span class="d">Te conectamos directo con el equipo por WhatsApp.</span></span>
+          </button>
+        </div>
+      </div>
+
+      <!-- RAMA B: Elegibilidad -->
+      <div class="wizard-step" data-step="elegibilidad">
+        <div class="kicker">Para orientarte mejor</div>
+        <h2>Unas preguntas rápidas</h2>
+        <p class="lead">A qué hospital te corresponde ir depende de si tienes seguro médico (derechohabiencia) de alguna institución — por eso preguntamos esto primero.</p>
+        <div class="field">
+          <label>¿Cuántas semanas de embarazo tienes, aproximadamente?</label>
+          <input type="number" id="w-semanas" placeholder="p. ej. 8">
+        </div>
+        <div class="field">
+          <label for="w-menor2">¿Eres menor de edad?</label>
+          <select id="w-menor2" aria-label="¿Eres menor de edad?">
+            <option value="no">No</option>
+            <option value="si">Sí</option>
+          </select>
+        </div>
+        <div class="field">
+          <label for="w-derecho">¿Eres derechohabiente de alguna institución? (¿tienes seguro médico?)</label>
+          <select id="w-derecho" aria-label="¿Eres derechohabiente de alguna institución?">
+            <option value="no">No tengo</option>
+            <option value="imss">Sí, de IMSS</option>
+            <option value="issstep">Sí, de ISSSTEP (estatal de Puebla)</option>
+            <option value="issste">Sí, de ISSSTE (federal)</option>
+            <option value="noselo">No lo sé</option>
+          </select>
+        </div>
+        <div class="field">
+          <label>¿En qué municipio estás?</label>
+          <input type="text" id="w-municipio2" placeholder="p. ej. Puebla">
+        </div>
+        <div class="wizard-nav">
+          <button type="button" class="wizard-back" data-back="1">← Volver</button>
+          <span class="spacer"></span>
+          <button type="button" class="btn btn-primary" id="w-elegibilidad-btn">Ver mi resultado <span class="ico">→</span></button>
+        </div>
+      </div>
+
+      <!-- Derechohabiente de IMSS -->
+      <div class="wizard-step" data-step="elegibilidad-imss">
+        <div class="wizard-result">
+          <div class="icon-circle"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M20 6 9 17l-5-5"/></svg></div>
+          <h2>Solo hay 2 hospitales de IMSS en todo Puebla</h2>
+          <p class="lead">Por ser derechohabiente de IMSS, te corresponde uno de estos dos, según tu unidad de medicina familiar:</p>
+        </div>
+        <div class="hosp-mini"><div class="h3">Hospital General Zona 35 — Cuautlancingo</div><div class="meta">San Juan Cuautlancingo, El Carmen 4-A · Corresponde a UMF 3, 4, 11, 14, 41, Huejotzingo, 47 Xoxtla</div></div>
+        <div class="hosp-mini"><div class="h3">Hospital General Regional 36 "Carmen Serdán"</div><div class="meta">Av. 10 poniente no. 12, Col. San Alejandro (ant. San Alejandro) · Resto de unidades médico familiares</div></div>
+        <div class="empty-note" style="margin:14px 0;"><span>⚠️</span><span>El Hospital de La Margarita <strong>no tiene servicio de ginecología</strong> — no acudas ahí.</span></div>
+        <div class="doc-placeholder">
+          <span class="dp-ic">📄</span>
+          <div><div class="dp-t">Antes de acudir: date de alta en tu unidad de medicina familiar</div><div class="dp-d">Luego acude a la jefatura de ginecología (8 a 14h) con tu carnet de vigencia de derechos.</div></div>
+          <a href="https://registro.imssbienestar.gob.mx/" target="_blank" rel="noopener" class="dp-btn">Registro IMSS Bienestar →</a>
+        </div>
+        <div class="still-need">
+          <a href="#" data-goto="1">← Volver a las opciones</a> &nbsp;·&nbsp;
+          <a href="#" data-goto="datos">¿Dudas sobre cuál te toca? Cuéntanos y te contactamos →</a>
+        </div>
+      </div>
+
+      <!-- Derechohabiente de ISSSTEP (estatal) -->
+      <div class="wizard-step" data-step="elegibilidad-issstep">
+        <div class="wizard-result">
+          <div class="icon-circle"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M20 6 9 17l-5-5"/></svg></div>
+          <h2>Te corresponde la Unidad Materno Infantil</h2>
+          <p class="lead">Por ser derechohabiente del ISSSTEP (estatal de Puebla):</p>
+        </div>
+        <div class="hosp-mini"><div class="h3">Unidad Materno Infantil del ISSSTEP</div><div class="meta">Lun–vie 8:00–14:00 <span class="pending-tag">dirección exacta por confirmar</span></div></div>
+        <div class="doc-placeholder">
+          <span class="dp-ic">📄</span>
+          <div><div class="dp-t">Lleva tu credencial de derechohabiente del ISSSTEP</div><div class="dp-d">Si eres menor de edad, ven acompañada de tu padre, madre o tutor con identificación oficial.</div></div>
+        </div>
+        <div class="still-need">
+          <a href="#" data-goto="1">← Volver a las opciones</a> &nbsp;·&nbsp;
+          <a href="#" data-goto="datos">¿Dudas sobre tu caso? Cuéntanos y te contactamos →</a>
+        </div>
+      </div>
+
+      <!-- Derechohabiente de ISSSTE (federal) -->
+      <div class="wizard-step" data-step="elegibilidad-issste">
+        <div class="wizard-result">
+          <div class="icon-circle"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M20 6 9 17l-5-5"/></svg></div>
+          <h2>El ISSSTE federal no es lo mismo que el ISSSTEP</h2>
+          <p class="lead">Como derechohabiente del ISSSTE (federal), las unidades en el estado de Puebla son: CMFE Puebla, CH Teziutlán, CH Huauchinango, CH Tehuacán, HR/HAE Puebla.</p>
+        </div>
+        <div class="doc-placeholder">
+          <span class="dp-ic">📄</span>
+          <div><div class="dp-t">Lleva tu credencial de derechohabiente del ISSSTE</div><div class="dp-d">Como derechohabiente ya no necesitas constancia de no derechohabiencia — solo tu credencial vigente. El resto de requisitos exactos, confírmalos en tu unidad. <span class="pending-tag">lista completa por confirmar</span></div></div>
+        </div>
+        <div class="empty-note" style="margin:14px 0;"><span>ℹ️</span><span>Para saber exactamente cuál te corresponde según tu domicilio, consulta www.issste.gob.mx o llama al 55 4000 1000.</span></div>
+        <div class="still-need">
+          <a href="#" data-goto="1">← Volver a las opciones</a> &nbsp;·&nbsp;
+          <a href="#" data-goto="datos">¿Dudas sobre tu caso? Cuéntanos y te contactamos →</a>
+        </div>
+      </div>
+
+      <!-- No sabe si tiene derechohabiencia -->
+      <div class="wizard-step" data-step="elegibilidad-noselo">
+        <div class="wizard-result is-alert">
+          <div class="icon-circle"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M12 9v4M12 17h.01M10.3 3.9 2.4 18a2 2 0 0 0 1.7 3h15.8a2 2 0 0 0 1.7-3L13.7 3.9a2 2 0 0 0-3.4 0z"/></svg></div>
+          <h2>Puedes comprobarlo tú misma</h2>
+          <p class="lead">Saber si tienes derechohabiencia (seguro médico de alguna institución) es el primer paso para saber qué hospital te corresponde. Puedes tramitarlo en línea:</p>
+        </div>
+        <div class="doc-placeholder">
+          <span class="dp-ic">📄</span>
+          <div><div class="dp-t">Constancia de no derechohabiencia — IMSS</div><div class="dp-d">Trámite digital en el sitio oficial del IMSS.</div></div>
+          <a href="https://digital.imss.gob.mx/derechohabiencia/tramite/solicitudConstancia" target="_blank" rel="noopener" class="dp-btn">Ir al trámite →</a>
+        </div>
+        <div class="doc-placeholder">
+          <span class="dp-ic">📄</span>
+          <div><div class="dp-t">Constancia de no derechohabiencia — ISSSTE</div><div class="dp-d">Trámite digital en la oficina virtual del ISSSTE.</div></div>
+          <a href="https://oficinavirtual.issste.gob.mx/Servicios/Acreditación-de-no-Afiliación" target="_blank" rel="noopener" class="dp-btn">Ir al trámite →</a>
+        </div>
+        <div class="still-need">
+          <p>¿Prefieres que te ayudemos a confirmarlo?</p>
+          <a href="#" data-goto="1">← Volver a las opciones</a> &nbsp;·&nbsp;
+          <a href="#" data-goto="datos">Cuéntanos y te ayudamos a confirmarlo →</a>
+        </div>
+      </div>
+
+      <!-- No derechohabiente: resultado dinámico según municipio (ver JS) -->
+      <div class="wizard-step" data-step="elegibilidad-no-resultado">
+        <div class="wizard-result" id="w-no-result-head">
+          <div class="icon-circle"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M20 6 9 17l-5-5"/></svg></div>
+          <h2 id="w-no-result-title">Puedes acudir directamente</h2>
+          <p class="lead" id="w-no-result-lead"></p>
+        </div>
+        <div id="w-no-result-hosp"></div>
+        <p style="margin:8px 0 0; font-size:.85rem;"><a href="aborto-legal.html" style="color:var(--verd-deep); font-weight:700;">Ver el listado completo de hospitales →</a></p>
+        <div class="doc-placeholder">
+          <span class="dp-ic">📄</span>
+          <div><div class="dp-t">Constancia de no derechohabiencia</div><div class="dp-d">Necesaria salvo que tengas registro IMSS Bienestar.</div></div>
+          <a href="https://registro.imssbienestar.gob.mx/" target="_blank" rel="noopener" class="dp-btn">Registro IMSS Bienestar →</a>
+        </div>
+        <div class="still-need">
+          <a href="#" data-goto="1">← Volver a las opciones</a> &nbsp;·&nbsp;
+          <a href="#" data-goto="datos">¿Dudas? Cuéntanos y te contactamos →</a>
+        </div>
+      </div>
+
+      <div class="wizard-step" data-step="elegibilidad-fuera">
+        <div class="wizard-result is-alert">
+          <div class="icon-circle"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M12 9v4M12 17h.01M10.3 3.9 2.4 18a2 2 0 0 0 1.7 3h15.8a2 2 0 0 0 1.7-3L13.7 3.9a2 2 0 0 0-3.4 0z"/></svg></div>
+          <h2>Tu caso necesita una valoración personal</h2>
+          <p class="lead">Por las semanas que nos comentas, el equipo necesita revisar tu situación directamente — puede que aun así tengas opciones. Cuéntanos un poco y te contactamos.</p>
+        </div>
+        <div class="wizard-nav">
+          <button type="button" class="wizard-back" data-back="1">← Volver</button>
+          <span class="spacer"></span>
+          <a href="#" data-goto="datos" class="btn btn-primary">Cuéntanos tu caso <span class="ico">→</span></a>
+        </div>
+      </div>
+
+      <div class="wizard-step" data-step="elegibilidad-menor">
+        <div class="wizard-result is-alert">
+          <div class="icon-circle"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M12 9v4M12 17h.01M10.3 3.9 2.4 18a2 2 0 0 0 1.7 3h15.8a2 2 0 0 0 1.7-3L13.7 3.9a2 2 0 0 0-3.4 0z"/></svg></div>
+          <h2>Vamos a acompañarte con más cuidado</h2>
+          <p class="lead">Es posible el acompañamiento siendo menor de edad, siempre y cuando sea tu decisión — pero se requiere la presencia de tus progenitores o tutores legales. El equipo puede explicarte bien cómo hacerlo.</p>
+        </div>
+        <div class="wizard-nav">
+          <button type="button" class="wizard-back" data-back="1">← Volver</button>
+          <span class="spacer"></span>
+          <a href="#" data-goto="datos" class="btn btn-primary">Cuéntanos tu caso <span class="ico">→</span></a>
+        </div>
+      </div>
+
+      <!-- RAMA C: Buscar FAQ -->
+      <div class="wizard-step" data-step="buscar">
+        <div class="kicker">Busca tu duda</div>
+        <h2>¿Qué quieres saber?</h2>
+        <div class="search-box">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/></svg>
+          <input type="text" id="w-faq-search" placeholder="p. ej. costo, menor de edad, semanas...">
+        </div>
+        <div class="faq-inline" id="w-faq-list">
+          <details data-kw="costo gratis gratuito precio dinero"><summary>¿Tiene costo?</summary><div class="a">No, los servicios en el sector salud son completamente gratuitos.</div></details>
+          <details data-kw="horario atencion tia amparo whatsapp"><summary>¿La tía Amparo tiene horario de atención?</summary><div class="a">Lunes a viernes de 10:00 a 17:00 horas, solo por WhatsApp.</div></details>
+          <details data-kw="semanas limite tiempo"><summary>¿Hay un límite de semanas?</summary><div class="a">El límite del sector salud es de 12.6 semanas. Hay causales legales que no especifican límite de semanas.</div></details>
+          <details data-kw="medicamento misoprostol mifepristona pastillas"><summary>¿Cómo es el aborto con medicamentos?</summary><div class="a">Con misoprostol, o combinado con mifepristona. Produce contracciones en el útero y provoca el sangrado.</div></details>
+          <details data-kw="ameu succion cirugia"><summary>¿Cómo es el aborto con AMEU?</summary><div class="a">Técnica de succión moderna recomendada por la OMS; dura 10–15 minutos, sin hospitalización.</div></details>
+          <details data-kw="despues recomendaciones cuidados"><summary>¿Qué recomendaciones hay después?</summary><div class="a">Evitar relaciones sexuales y tampones 5 días. Considerar anticonceptivos y valorar apoyo emocional.</div></details>
+          <details data-kw="menor edad tutor joven adolescente"><summary>¿Qué pasa si soy menor de edad?</summary><div class="a">Es posible el acompañamiento siempre que sea tu decisión, pero se requiere presencia de tutores legales.</div></details>
+          <details data-kw="tiempo tarda rapido cuanto"><summary>¿Cuánto se puede tardar?</summary><div class="a">Por lo regular se brinda la atención el mismo día si se cumplen los requisitos.</div></details>
+          <details data-kw="trato discriminacion respeto atencion"><summary>¿Cómo deben darme la atención?</summary><div class="a">Anteponiendo tu vida, bienestar y autonomía, sin estigma ni discriminación.</div></details>
+          <details data-kw="niegan negativa rechazo queja"><summary>¿Qué hago si me niegan el servicio?</summary><div class="a">Documenta la situación y presenta una queja en los mecanismos de cada hospital.</div></details>
+          <details data-kw="hospital acudir donde ir cual me corresponde"><summary>¿A qué hospital debo ir?</summary><div class="a">No puedes elegir cualquiera: depende de si tienes seguro médico (derechohabiencia) de alguna institución — si eres de IMSS, ISSSTEP o ISSSTE te toca un hospital específico; si no tienes, hay hospitales generales según tu municipio. Usa la opción <strong>"Saber si califico y a qué hospital ir"</strong> del inicio para verlo exacto según tu caso.</div></details>
+        </div>
+        <p class="no-match" id="w-faq-empty" style="display:none;">No encontramos nada con esas palabras — prueba con otra o escríbenos directamente.</p>
+
+        <div class="stats-form" data-stats>
+          <div class="stf-head">
+            <div>
+              <h3>¿Nos ayudas con 2 datos? (opcional)</h3>
+              <p class="stf-sub">Solo para las estadísticas del servicio — nunca identifican quién eres.</p>
+            </div>
+            <button type="button" class="skip" data-skip-stats>No, gracias</button>
+          </div>
+          <div class="stf-body">
+            <div class="wizard-row2">
+              <div class="field"><label>Municipio</label><input type="text" placeholder="p. ej. Puebla"></div>
+              <div class="field"><label>Edad</label><input type="number" placeholder="24"></div>
+            </div>
+            <button type="button" class="btn btn-secondary" data-submit-stats>Enviar, gracias</button>
+            <p class="privacy-note">Tus datos se manejan de forma confidencial, conforme a la normativa de protección de datos personales aplicable, y se usan únicamente por CAFIS con fines estadísticos internos del servicio — nunca se comparten con terceros.</p>
+          </div>
+          <p class="stf-thanks">¡Gracias! Esto nos ayuda mucho a seguir mejorando el servicio. 💜</p>
+        </div>
+
+        <div class="still-need">
+          <a href="#" data-goto="1">← Volver a las opciones</a> &nbsp;·&nbsp;
+          <a href="#" data-goto="datos">¿Aún tienes dudas? Cuéntanos y te contactamos →</a>
+        </div>
+      </div>
+
+      <!-- RAMA D: Hablar directamente / formulario único de acceso a servicio -->
+      <div class="wizard-step" data-step="datos">
+        <div class="kicker">Antes de escribirte</div>
+        <h2>Cuéntanos un poco de tu situación</h2>
+        <p class="lead">Son pocas preguntas y son sencillas — así el equipo ya sabe lo esencial y no tienes que repetirlo todo por WhatsApp.</p>
+        <div class="wizard-row2">
+          <div class="field">
+            <label>¿Cuántas semanas de embarazo tienes, aproximadamente?</label>
+            <input type="number" id="w-semanas3" placeholder="p. ej. 8">
+          </div>
+          <div class="field">
+            <label>Edad</label>
+            <input type="number" id="w-edad" placeholder="24">
+          </div>
+        </div>
+        <div class="field">
+          <label for="w-derecho2">¿Eres derechohabiente de alguna institución? (¿tienes seguro médico?)</label>
+          <select id="w-derecho2" aria-label="¿Eres derechohabiente de alguna institución?">
+            <option value="no">No tengo</option>
+            <option value="imss">Sí, de IMSS</option>
+            <option value="issstep">Sí, de ISSSTEP (estatal de Puebla)</option>
+            <option value="issste">Sí, de ISSSTE (federal)</option>
+            <option value="noselo">No lo sé</option>
+          </select>
+        </div>
+        <div class="field">
+          <label>Municipio</label>
+          <input type="text" id="w-municipio" placeholder="p. ej. Puebla">
+        </div>
+        <div class="field">
+          <label>Teléfono (para que el equipo pueda ubicar tu conversación de WhatsApp)</label>
+          <input type="tel" id="w-telefono" placeholder="222 000 0000">
+        </div>
+        <div class="checkbox-row"><input type="checkbox" id="w-indigena"><label for="w-indigena">Me identifico como población indígena</label></div>
+        <div class="checkbox-row"><input type="checkbox" id="w-discapacidad"><label for="w-discapacidad">Me identifico como persona con discapacidad</label></div>
+        <div class="field">
+          <label>¿Quieres contarnos algo más? (opcional)</label>
+          <textarea id="w-comentario" rows="3" placeholder="Lo que quieras compartir, con tus palabras..."></textarea>
+        </div>
+        <div class="wizard-nav">
+          <button type="button" class="wizard-back" data-back="1">← Volver</button>
+          <span class="spacer"></span>
+          <button type="button" class="btn btn-primary" data-goto="final">Continuar <span class="ico">→</span></button>
+        </div>
+      </div>
+
+      <div class="wizard-step" data-step="final">
+        <div class="kicker">Ya casi está</div>
+        <h2>Vamos a conectarte por WhatsApp</h2>
+        <p class="lead">El equipo verá esta información para darte seguimiento sin que tengas que repetirla.</p>
+        <div class="mini-summary" id="w-resumen"></div>
+        <div class="wizard-consent">
+          <input type="checkbox" id="w-consent">
+          <label for="w-consent">Acepto que CAFIS guarde esta información de forma privada, únicamente para poder ayudarme y dar seguimiento a mi caso.</label>
+        </div>
+        <p class="privacy-note">Tus datos se manejan de forma confidencial, conforme a la normativa de protección de datos personales aplicable, y se usan únicamente por CAFIS con fines estadísticos internos del servicio — nunca se comparten con terceros.</p>
+        <div class="wizard-nav">
+          <button type="button" class="wizard-back" data-back="datos">← Volver</button>
+          <span class="spacer"></span>
+          <a href="https://wa.link/bzdji9" class="btn btn-primary" id="w-whatsapp-btn">Continuar por WhatsApp <span class="ico">→</span></a>
+        </div>
+      </div>
+
+    </div>
+
+    <p style="text-align:center; font-size:.78rem; color:var(--tinta-suau); margin-top:18px;">
+      Nota de maqueta: aquí no se guarda nada todavía de verdad — eso se conecta cuando aprobemos este diseño.
+    </p>
+  </div>
+
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-bottom">
+      <img class="cafis-mark" src="assets/img/cafis-isotipo-blanco.png" alt="CAFIS A.C.">
+      <div class="footer-links"><a href="#">Aviso de privacidad</a></div>
+      <div class="socials">
+        <a href="#" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.2" cy="6.8" r="1.1" fill="currentColor" stroke="none"/></svg></a>
+        <a href="#" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M14 9h3V5.5h-3C11.8 5.5 10 7.3 10 9.5V12H8v3h2v6h3v-6h2.6l.4-3H13V9.6c0-.4.3-.6.7-.6H14z"/></svg></a>
+        <a href="https://wa.link/bzdji9" aria-label="WhatsApp"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 3a9 9 0 0 0-7.6 13.8L3 21l4.3-1.4A9 9 0 1 0 12 3zm0 1.8a7.2 7.2 0 1 1-3.8 13.3l-.3-.2-2.6.8.8-2.5-.2-.3A7.2 7.2 0 0 1 12 4.8zm-3.1 3.6c-.2 0-.5 0-.6.3-.2.3-.8 1-.8 2.3s.8 2.6.9 2.8c.1.2 1.6 2.5 4 3.5 2 .8 2.4.6 2.8.6.5 0 1.6-.6 1.8-1.2.2-.6.2-1.1.2-1.2-.1-.1-.2-.2-.5-.3-.2-.1-1.6-.8-1.8-.9-.2-.1-.4-.1-.6.1-.2.3-.6.9-.8 1-.1.2-.3.2-.5.1-.3-.1-1.1-.4-2-1.3-.8-.7-1.3-1.6-1.4-1.8-.1-.2 0-.4.1-.5l.4-.5c.1-.2.2-.3.2-.5.1-.2 0-.4 0-.5-.1-.1-.6-1.5-.8-2-.2-.5-.4-.5-.6-.5z"/></svg></a>
+      </div>
+      <span>© Todos los Derechos Reservados a CAFIS 2024</span>
+    </div>
+  </div>
+</footer>
+
+<script src="assets/js/main.js"></script>
+<script>
+(function(){
+  const steps = document.querySelectorAll(".wizard-step");
+
+  function show(name){
+    if (name === "datos") prefillDatos();
+    steps.forEach(s => s.classList.toggle("active", s.dataset.step === name));
+    window.scrollTo({ top: document.querySelector(".wizard-wrap").offsetTop - 20, behavior: "smooth" });
+  }
+
+  // Si ya contestó semanas/derechohabiencia/municipio en "elegibilidad", no se le
+  // vuelve a preguntar en el formulario final — se copia automáticamente.
+  function prefillDatos(){
+    const semanasOrigen = document.getElementById("w-semanas");
+    const derechoOrigen = document.getElementById("w-derecho");
+    const municipioOrigen = document.getElementById("w-municipio2");
+    const semanasDestino = document.getElementById("w-semanas3");
+    const derechoDestino = document.getElementById("w-derecho2");
+    const municipioDestino = document.getElementById("w-municipio");
+    if (semanasOrigen && semanasOrigen.value && !semanasDestino.value) semanasDestino.value = semanasOrigen.value;
+    if (derechoOrigen && derechoOrigen.value && derechoDestino.value === "no") derechoDestino.value = derechoOrigen.value;
+    if (municipioOrigen && municipioOrigen.value && !municipioDestino.value) municipioDestino.value = municipioOrigen.value;
+  }
+
+  document.querySelectorAll("[data-goto]").forEach(btn => {
+    btn.addEventListener("click", (e) => { e.preventDefault(); show(btn.dataset.goto); });
+  });
+  document.querySelectorAll("[data-back]").forEach(btn => {
+    btn.addEventListener("click", () => show(btn.dataset.back));
+  });
+
+  // Municipios con Hospital General confirmado (fuente: carpeta "Servicios Salud ILE", jul 2026)
+  const HOSPITALES_MUNICIPIO = [
+    { kw: ["puebla capital", "agua santa"], nombre: "Hospital de la Mujer (Hospital General del Sur) — Puebla", meta: "Antiguo Camino a Guadalupe Hidalgo 11350, Col. Agua Santa · Consultorio 13, Dra. Sara Ramírez · Lun–vie 8:00–10:00 a.m." },
+    { kw: ["puebla"], nombre: "Hospital de la Mujer / Hospital General del Norte — Puebla", meta: "Puebla capital tiene 2 opciones: Hospital de la Mujer (L-V 8:00–10:00 a.m.) y Hospital General del Norte (L-V desde 8:00 a.m., dirección por confirmar)." },
+    { kw: ["tehuac"], nombre: "Hospital de la Mujer y Neonatología — Tehuacán", meta: "Lun–vie desde 8:00 a.m. · área de urgencias/ginecología/recepción" },
+    { kw: ["atlixco"], nombre: "Hospital General — Atlixco", meta: "Lun–vie 8:00–13:00 · Dra. Iliana Flores / Dra. Celi Flora" },
+    { kw: ["acatl"], nombre: "Hospital General — Acatlán de Osorio", meta: "Lun–vie 8:00–14:00 · área de urgencias/ginecología" },
+    { kw: ["huauchinango"], nombre: "Hospital General — Huauchinango", meta: "Lun–vie desde 8:00 a.m. · módulo MATER" },
+    { kw: ["izucar", "izúcar", "matamoros"], nombre: "Hospital General — Izúcar de Matamoros", meta: "Sábado y domingo, 12:00–17:00 (único con horario de fin de semana)" },
+    { kw: ["tecamachalco"], nombre: "Hospital General — Tecamachalco", meta: "Lun–vie desde 8:00 a.m. · área de urgencias/ginecología" },
+    { kw: ["tepeaca"], nombre: "Hospital General — Tepeaca", meta: "Lun–vie 8:00–12:00 · módulo MATER/urgencias" },
+    { kw: ["teziutl"], nombre: "Hospital General — Teziutlán", meta: "Av. Bugambilias no. 7, Xoloateno, Teziutlán · abierto 24h, 365 días" },
+    { kw: ["tlatlauqui"], nombre: "Hospital General — Tlatlauquitepec", meta: "Lun–vie 8:00–12:00 · recepción/urgencias" },
+    { kw: ["zacatl"], nombre: "Hospital General — Zacatlán", meta: "Lun–vie desde 8:00 a.m. · urgencias/triage" },
+  ];
+
+  function buscaHospitalPorMunicipio(municipio) {
+    return HOSPITALES_MUNICIPIO.find(h => h.kw.some(k => municipio.includes(k)));
+  }
+
+  // Rama B: decide resultado (semanas → menor → derechohabiencia → municipio)
+  document.getElementById("w-elegibilidad-btn").addEventListener("click", () => {
+    const semanas = parseFloat(document.getElementById("w-semanas").value);
+    const menor = document.getElementById("w-menor2").value;
+    const derecho = document.getElementById("w-derecho").value;
+    const municipio = (document.getElementById("w-municipio2").value || "").trim().toLowerCase();
+
+    if (menor === "si") { show("elegibilidad-menor"); return; }
+    if (!isNaN(semanas) && semanas > 12.6) { show("elegibilidad-fuera"); return; }
+
+    if (derecho === "imss") { show("elegibilidad-imss"); return; }
+    if (derecho === "issstep") { show("elegibilidad-issstep"); return; }
+    if (derecho === "issste") { show("elegibilidad-issste"); return; }
+    if (derecho === "noselo") { show("elegibilidad-noselo"); return; }
+
+    // derecho === "no": buscamos su municipio entre los 12 confirmados
+    const match = buscaHospitalPorMunicipio(municipio);
+    if (match) {
+      document.getElementById("w-no-result-title").textContent = "Puedes acudir directamente";
+      document.getElementById("w-no-result-lead").textContent = "Al no ser derechohabiente, puedes acudir a:";
+      document.getElementById("w-no-result-hosp").innerHTML =
+        `<div class="hosp-mini"><div class="h3">${match.nombre}</div><div class="meta">${match.meta}</div></div>`;
+    } else {
+      document.getElementById("w-no-result-title").textContent = "Aún no tenemos confirmado tu municipio";
+      document.getElementById("w-no-result-lead").textContent = "No todos los municipios tienen servicio directo — mejor confírmalo con nosotras. Estos son los 12 municipios confirmados hasta ahora:";
+      document.getElementById("w-no-result-hosp").innerHTML =
+        `<div class="hosp-mini"><div class="meta">Puebla capital, Tehuacán, Atlixco, Acatlán de Osorio, Huauchinango, Izúcar de Matamoros, Tecamachalco, Tepeaca, Teziutlán, Tlatlauquitepec, Zacatlán.</div></div>`;
+    }
+    show("elegibilidad-no-resultado");
+  });
+
+  // Rama C: buscador FAQ en vivo
+  const searchInput = document.getElementById("w-faq-search");
+  if (searchInput){
+    searchInput.addEventListener("input", () => {
+      const q = searchInput.value.trim().toLowerCase();
+      const items = document.querySelectorAll("#w-faq-list details");
+      let visible = 0;
+      items.forEach(d => {
+        const match = !q || d.dataset.kw.includes(q) || d.textContent.toLowerCase().includes(q);
+        d.style.display = match ? "" : "none";
+        if (match) visible++;
+      });
+      document.getElementById("w-faq-empty").style.display = visible ? "none" : "block";
+    });
+  }
+
+  // Mini-formularios opcionales de estadísticas
+  document.querySelectorAll("[data-stats]").forEach(form => {
+    form.querySelector("[data-skip-stats]").addEventListener("click", () => form.remove());
+    form.querySelector("[data-submit-stats]").addEventListener("click", () => form.classList.add("answered"));
+  });
+
+  // Rama D: resumen + consentimiento
+  document.getElementById("w-whatsapp-btn").addEventListener("click", function(e){
+    if (!document.getElementById("w-consent").checked){
+      e.preventDefault();
+      alert("Marca la casilla de consentimiento para continuar.");
+    }
+  });
+  const finalStep = document.querySelector('[data-step="final"]');
+  const observer = new MutationObserver(() => {
+    if (finalStep.classList.contains("active")){
+      const DERECHO_LABEL = { no: "No tiene", imss: "IMSS", issstep: "ISSSTEP (estatal)", issste: "ISSSTE (federal)", noselo: "No lo sabe" };
+      const semanas = document.getElementById("w-semanas3").value || "(sin indicar)";
+      const derecho = DERECHO_LABEL[document.getElementById("w-derecho2").value] || "(sin indicar)";
+      const municipio = document.getElementById("w-municipio").value || "(sin indicar)";
+      const edad = document.getElementById("w-edad").value || "(sin indicar)";
+      const telefono = document.getElementById("w-telefono").value || "(sin indicar)";
+      const indigena = document.getElementById("w-indigena").checked ? "Sí" : "No";
+      const discapacidad = document.getElementById("w-discapacidad").checked ? "Sí" : "No";
+      const comentario = document.getElementById("w-comentario").value;
+      document.getElementById("w-resumen").innerHTML =
+        "<b>Semanas de embarazo:</b> " + semanas +
+        "<br><b>Derechohabiencia:</b> " + derecho +
+        "<br><b>Municipio:</b> " + municipio + "<br><b>Edad:</b> " + edad +
+        "<br><b>Teléfono:</b> " + telefono +
+        "<br><b>Población indígena:</b> " + indigena +
+        "<br><b>Persona con discapacidad:</b> " + discapacidad +
+        (comentario ? "<br><b>Nota:</b> " + comentario : "");
+    }
+  });
+  observer.observe(finalStep, { attributes: true, attributeFilter: ["class"] });
+})();
+</script>
+
+</body>
+</html>
