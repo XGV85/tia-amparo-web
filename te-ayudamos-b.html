@@ -263,25 +263,6 @@
         </div>
         <p class="no-match" id="w-faq-empty" style="display:none;">No encontramos nada con esas palabras — prueba con otra o escríbenos directamente.</p>
 
-        <div class="stats-form" data-stats>
-          <div class="stf-head">
-            <div>
-              <h3>¿Nos ayudas con 2 datos? (opcional)</h3>
-              <p class="stf-sub">Solo para las estadísticas del servicio — nunca identifican quién eres.</p>
-            </div>
-            <button type="button" class="skip" data-skip-stats>No, gracias</button>
-          </div>
-          <div class="stf-body">
-            <div class="wizard-row2">
-              <div class="field"><label>Municipio</label><input type="text" placeholder="p. ej. Puebla"></div>
-              <div class="field"><label>Edad</label><input type="number" placeholder="24"></div>
-            </div>
-            <button type="button" class="btn btn-secondary" data-submit-stats>Enviar, gracias</button>
-            <p class="privacy-note">Tus datos se manejan de forma confidencial, conforme a la normativa de protección de datos personales aplicable, y se usan únicamente por CAFIS con fines estadísticos internos del servicio — nunca se comparten con terceros.</p>
-          </div>
-          <p class="stf-thanks">¡Gracias! Esto nos ayuda mucho a seguir mejorando el servicio. 💜</p>
-        </div>
-
         <div class="still-need">
           <a href="#" data-goto="1">← Volver a las opciones</a> &nbsp;·&nbsp;
           <a href="#" data-goto="datos">¿Aún tienes dudas? Cuéntanos y te contactamos →</a>
@@ -475,12 +456,6 @@
       document.getElementById("w-faq-empty").style.display = visible ? "none" : "block";
     });
   }
-
-  // Mini-formularios opcionales de estadísticas
-  document.querySelectorAll("[data-stats]").forEach(form => {
-    form.querySelector("[data-skip-stats]").addEventListener("click", () => form.remove());
-    form.querySelector("[data-submit-stats]").addEventListener("click", () => form.classList.add("answered"));
-  });
 
   // Rama D: resumen + consentimiento
   document.getElementById("w-whatsapp-btn").addEventListener("click", function(e){
