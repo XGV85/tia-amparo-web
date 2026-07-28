@@ -230,6 +230,9 @@ section{ padding: 76px 0; position:relative; scroll-margin-top: 90px; }
 /* llistat compacte de municipis + blocs d'institució (IMSS/ISSSTEP/ISSSTE) */
 .req-callout{ max-width: 760px; margin: 0 auto 36px; background: var(--rosa); border-radius: var(--radius); padding: 22px 26px; font-size: .92rem; color: var(--tinta); }
 .req-callout strong{ color: var(--lila-deep); }
+.req-callout ul{ margin: 12px 0 0; padding-left: 1.3em; }
+.req-callout li{ margin-bottom: 8px; line-height: 1.5; }
+.req-callout li:last-child{ margin-bottom: 0; }
 .hosp-grid{ display:grid; grid-template-columns: repeat(3, 1fr); gap:16px; }
 @media (max-width: 900px){ .hosp-grid{ grid-template-columns: repeat(2, 1fr); } }
 @media (max-width: 600px){ .hosp-grid{ grid-template-columns: 1fr; } }
