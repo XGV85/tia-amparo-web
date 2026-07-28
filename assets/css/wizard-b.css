@@ -1,6 +1,4 @@
-/* Flux guiat v2-B — variant "divertida", amb el joc de paraules Amparo/ampara
-   i el rebozo com a motiu visual recurrent (embolcalla = ampara). No toca
-   wizard.css (versió A) ni les pàgines ja aprovades. */
+/* Flux guiat — estils del wizard de te-ayudamos-b.html, l'única versió vigent. */
 
 .wizard-hero{ background: linear-gradient(150deg, var(--coral) -10%, var(--lila) 38%, var(--lila-deep) 100%); padding: 64px 0 calc(var(--edge) + 30px); position:relative; overflow:hidden; color:#fff; }
 .wizard-hero .container{ max-width:720px; text-align:center; position:relative; z-index:1; }
