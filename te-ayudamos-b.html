@@ -322,6 +322,8 @@
           <input type="tel" id="w-telefono" placeholder="222 000 0000">
         </div>
         <div class="checkbox-row"><input type="checkbox" id="w-indigena"><label for="w-indigena">Me identifico como población indígena</label></div>
+        <div class="checkbox-row"><input type="checkbox" id="w-afromexicana"><label for="w-afromexicana">Me identifico como población afromexicana</label></div>
+        <div class="checkbox-row"><input type="checkbox" id="w-lgbttiq"><label for="w-lgbttiq">Me identifico como población LGBTTTIQ+</label></div>
         <div class="checkbox-row"><input type="checkbox" id="w-discapacidad"><label for="w-discapacidad">Me identifico como persona con discapacidad</label></div>
         <div class="field">
           <label>¿Quieres contarnos algo más? (opcional)</label>
@@ -497,6 +499,8 @@
       const edad = document.getElementById("w-edad").value || "(sin indicar)";
       const telefono = document.getElementById("w-telefono").value || "(sin indicar)";
       const indigena = document.getElementById("w-indigena").checked ? "Sí" : "No";
+      const afromexicana = document.getElementById("w-afromexicana").checked ? "Sí" : "No";
+      const lgbttiq = document.getElementById("w-lgbttiq").checked ? "Sí" : "No";
       const discapacidad = document.getElementById("w-discapacidad").checked ? "Sí" : "No";
       const comentario = document.getElementById("w-comentario").value;
       document.getElementById("w-resumen").innerHTML =
@@ -505,6 +509,8 @@
         "<br><b>Municipio:</b> " + municipio + "<br><b>Edad:</b> " + edad +
         "<br><b>Teléfono:</b> " + telefono +
         "<br><b>Población indígena:</b> " + indigena +
+        "<br><b>Población afromexicana:</b> " + afromexicana +
+        "<br><b>Población LGBTTTIQ+:</b> " + lgbttiq +
         "<br><b>Persona con discapacidad:</b> " + discapacidad +
         (comentario ? "<br><b>Nota:</b> " + comentario : "");
     }
