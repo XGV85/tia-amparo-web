@@ -8,6 +8,7 @@
 @keyframes swayRebozo{ 0%,100%{ transform: rotate(-2deg); } 50%{ transform: rotate(2deg); } }
 .wizard-hero .warm-note{ display:inline-block; margin-top:16px; font-family:var(--font-serif); font-style:italic; font-size:1rem; color:var(--groc-suau); }
 .wizard-hero .eyebrow{ color: var(--groc-suau); justify-content:center; }
+@media (max-width:760px){ .wizard-hero .eyebrow::before{ display:none; } }
 .wizard-hero h1{ font-size: clamp(2.1rem, 4.4vw, 3rem); color:#fff; }
 .wizard-hero p{ color: rgba(255,255,255,.86); font-size:1.05rem; max-width:52ch; margin:0 auto; }
 .wizard-hero .blob{ opacity:.16; }
@@ -77,6 +78,10 @@
 .wizard-consent input{ margin-top:3px; width:18px; height:18px; accent-color: var(--verd); flex-shrink:0; }
 .wizard-consent label{ font-size:.86rem; color:var(--tinta); }
 
+.checkbox-row{ display:flex; gap:10px; align-items:flex-start; margin-bottom:12px; }
+.checkbox-row input{ margin-top:3px; width:18px; height:18px; accent-color: var(--verd); flex-shrink:0; }
+.checkbox-row label{ font-size:.92rem; color:var(--tinta); line-height:1.4; }
+
 .wizard-nav{ display:flex; justify-content:space-between; align-items:center; margin-top:26px; gap:12px; }
 .wizard-nav .spacer{ flex:1; }
 .wizard-back{ background:none; border:none; color:var(--tinta-suau); font-family:var(--font-display); font-weight:700; font-size:.86rem; cursor:pointer; padding:10px; }
@@ -110,11 +115,15 @@
 .privacy-note a{ color:var(--verd-deep); }
 
 /* documento de muestra (p.ej. constancia de no derechohabiencia) — enlace aún pendiente */
-.doc-placeholder{ display:flex; align-items:center; gap:14px; border:1.5px dashed var(--rosa-deep); border-radius:14px; padding:14px 16px; background:#fffaf8; margin:14px 0; }
+.doc-placeholder{ display:flex; flex-wrap:wrap; align-items:center; gap:10px 14px; border:1.5px dashed var(--rosa-deep); border-radius:14px; padding:14px 16px; background:#fffaf8; margin:14px 0; }
 .doc-placeholder .dp-ic{ font-size:1.5rem; flex-shrink:0; }
 .doc-placeholder .dp-t{ font-weight:700; color:var(--lila-deep); font-size:.88rem; }
 .doc-placeholder .dp-d{ font-size:.76rem; color:var(--tinta-suau); }
+.doc-placeholder > div:nth-child(2){ flex:1 1 180px; min-width:0; }
 .doc-placeholder .dp-btn{ margin-left:auto; font-size:.8rem; font-weight:700; color:var(--verd-deep); white-space:nowrap; flex-shrink:0; }
+@media (max-width:480px){
+  .doc-placeholder .dp-btn{ margin-left:44px; }
+}
 
 .pending-tag{ display:inline-block; background:#fff3cd; color:#8a6d1a; font-size:.68rem; font-weight:700; padding:2px 8px; border-radius:6px; margin-left:6px; vertical-align:middle; white-space:nowrap; }
 .hosp-mini.is-pending{ opacity:.85; }
